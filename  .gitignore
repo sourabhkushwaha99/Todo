@@ -1,0 +1,16 @@
+/target/
+*.log
+*.class
+*.jar
+*.war
+*.iml
+/.idea/
+/.vscode/
+/*.iws
+/*.iml
+/*.ipr
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
