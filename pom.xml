@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>TodoApp</name>
 	<description>This is Todo Application</description>
+	
 	<url/>
 	<licenses>
 		<license/>
@@ -31,10 +32,6 @@
 	</properties>
 	<dependencies>
 	
-	<dependency>
-    <groupId>org.thymeleaf.extras</groupId>
-    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
-</dependency>
 	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -85,6 +82,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+
 			</plugin>
 		</plugins>
 	</build>

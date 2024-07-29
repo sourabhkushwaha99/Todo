@@ -31,13 +31,13 @@ public class SecurityConfig {
   
 	 
 	 	@Bean
-	    public PasswordEncoder passwordEncoder() {
+	     PasswordEncoder passwordEncoder() {
 	        return new BCryptPasswordEncoder();
 	    }
 	 	
 	 	
 	 	@Bean
-	    public DaoAuthenticationProvider authenticationProvider() {
+	     DaoAuthenticationProvider authenticationProvider() {
 	        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 	        authProvider.setUserDetailsService(userService);
 	        authProvider.setPasswordEncoder(passwordEncoder());
@@ -52,7 +52,7 @@ public class SecurityConfig {
 	 	 
 	 	 
 	 	 @Bean
-	     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+	      SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 	         http
 	             .authorizeHttpRequests(authz -> authz
 	                 .requestMatchers("/register", "/login","/css/**","/image/**").permitAll()
@@ -76,7 +76,7 @@ public class SecurityConfig {
 	 	 
 	 	 
 	 	@Bean 
-	    public AuthenticationFailureHandler authenticationFailureHandler() {
+	    AuthenticationFailureHandler authenticationFailureHandler() {
 	        return new SimpleUrlAuthenticationFailureHandler("/login?error=true");
 	    }
 
